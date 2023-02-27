@@ -19,12 +19,10 @@ public class JobApplicationTest
                 Age = 18
             }
         };
-
         // Act
         var result = evaluator.Evaluate(form);
 
         // Assert
-        Assert.AreEqual(ApplicationResult.AutoAccepted, result);
+        Assert.That(result, Is.EqualTo(ApplicationResult.AutoAccepted));
     }
-
 }
