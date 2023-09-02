@@ -39,8 +39,8 @@ jobs:
         CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
     - name: Commit and Push Changes
       run: |
-        git config user.name "GitHub Actions"
-        git config user.email "actions@github.com"
+        git config user.name "Asger Babayev"
+        git config user.email "asgerbabayev@hotmail.com"
         git add README.md
         git commit -m "Update README.md with code coverage badge"
         git push
