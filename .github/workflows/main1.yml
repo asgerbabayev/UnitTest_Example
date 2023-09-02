@@ -32,9 +32,7 @@ jobs:
 
     - name: Generate Code Coverage Badge
       run: |
-        bash <(curl -s https://codecov.io/bash) -f ./TestResults/coverage.opencover.xml -t ${{ secrets.CODECOV_TOKEN }}
-         - name: Update README.md
-        echo "[![codecov](https://codecov.io/github/asgerbabayev/UnitTest_Example/graph/badge.svg?token=VN8ZLQFPV1)](https://codecov.io/github/asgerbabayev/UnitTest_Example)" > README.md
+        echo "[![codecov](https://codecov.io/github/asgerbabayev/UnitTest_Example/graph/badge.svg?token=VN8ZLQFPV1)](https://codecov.io/github/asgerbabayev/UnitTest_Example)" > ./README.md
     - name: Upload coverage reports to Codecov
       uses: codecov/codecov-action@v3
       env:
