@@ -33,4 +33,7 @@ jobs:
     - name: Generate Code Coverage Badge
       run: |
         bash <(curl -s https://codecov.io/bash) -f ./TestResults/coverage.opencover.xml -t ${{ secrets.CODECOV_TOKEN }}
-
+    - name: Upload coverage reports to Codecov
+      uses: codecov/codecov-action@v3
+      env:
+        CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
